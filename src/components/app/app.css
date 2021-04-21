@@ -1,0 +1,13 @@
+.app__container * {
+  box-sizing: border-box;
+}
+
+.app__container {
+  display: flex;
+}
+
+@media (max-width: 900px) {
+  .app__container {
+    flex-direction: column-reverse;
+  }
+}

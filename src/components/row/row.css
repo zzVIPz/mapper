@@ -1,0 +1,13 @@
+.row {
+  display: flex;
+  margin: 10px 0;
+  padding: 20px;
+
+  font-weight: bold;
+  font-size: 24px;
+  color: #333333;
+
+  background: #e0f2ff;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+}
