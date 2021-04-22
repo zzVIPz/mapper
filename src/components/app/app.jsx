@@ -1,5 +1,5 @@
 // NATIONAL GRID INTERVIEW ASSIGNMENT
-// CANDIDATE NAME:
+// CANDIDATE NAME: SERGEY TELEGO
 
 import React, { useEffect } from 'react';
 
@@ -33,6 +33,14 @@ function AppContainer({ fetchJob, priorityFilter, statusFilter, dateFilter }) {
   return <App />;
 }
 
+const mapStateToProps = ({
+  filters: { priorityFilter, statusFilter, dateFilter },
+}) => ({
+  priorityFilter,
+  statusFilter,
+  dateFilter,
+});
+
 const mapDispatchToProps = (dispatch, { jobService }) =>
   bindActionCreators(
     {
@@ -43,5 +51,5 @@ const mapDispatchToProps = (dispatch, { jobService }) =>
 
 export default compose(
   withJobService(),
-  connect(null, mapDispatchToProps),
+  connect(mapStateToProps, mapDispatchToProps),
 )(AppContainer);

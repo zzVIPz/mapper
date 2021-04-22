@@ -4,7 +4,7 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 
-import App from './components/app/app';
+import App from './components/app';
 import JobService from './services/job-service';
 import { JobServiceProvider } from './components/job-service-context';
 

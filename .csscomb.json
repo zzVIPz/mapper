@@ -1,6 +1,8 @@
 {
-  "exclude": [".git/**", "node_modules/**"],
-
+  "exclude": [
+    ".git/**",
+    "node_modules/**"
+  ],
   "always-semicolon": true,
   "block-indent": "  ",
   "color-case": "lower",
@@ -26,7 +28,15 @@
   "unitless-zero": true,
   "vendor-prefix-align": true,
   "sort-order": [
-    ["content", "position", "top", "right", "bottom", "left", "z-index"],
+    [
+      "content",
+      "position",
+      "top",
+      "right",
+      "bottom",
+      "left",
+      "z-index"
+    ],
     [
       "display",
       "-webkit-box",

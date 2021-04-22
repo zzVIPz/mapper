@@ -35,7 +35,6 @@ function Sidebar({
           onChange={(key) => handlePriorityChange(key)}
         />
       </Row>
-
       <Row>
         <Filter
           title={STATUS_LABEL}
