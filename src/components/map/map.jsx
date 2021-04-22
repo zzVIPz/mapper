@@ -15,7 +15,7 @@ function JobMap({ markers, center, zoom }) {
   return (
     <div className="map">
       <GoogleMapReact
-        bootstrapURLKeys={{ key: 'aaaaaa' }}
+        bootstrapURLKeys={{ key: 'AIzaSyB9YBNN9dd0EBVOODgJ-k495AgA5sc4Sos' }}
         defaultCenter={center}
         defaultZoom={zoom}
         options={{ disableDoubleClickZoom: true, fullscreenControl: false }}
@@ -29,7 +29,12 @@ function JobMap({ markers, center, zoom }) {
 function JobMapContainer({ jobs, priorityFilter, statusFilter, dateFilter }) {
   const { center, zoom } = MAP_DEFAULT_PROPS;
 
-  const filteredJobs = filterJobs(jobs, priorityFilter, statusFilter, dateFilter);
+  const filteredJobs = filterJobs(
+    jobs,
+    priorityFilter,
+    statusFilter,
+    dateFilter,
+  );
 
   const markers = filteredJobs.map((el) => {
     const { lat, long, id, priority } = el;

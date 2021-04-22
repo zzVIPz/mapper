@@ -1,7 +1,8 @@
 const express = require('express');
+
 const app = express();
 const port = process.env.PORT || 5000;
-var data = require('./src/data.json');
+const data = require('./src/data.json');
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
@@ -10,4 +11,4 @@ app.get('/example', (req, res) => {
   res.send(data);
 });
 
-//create a GET route for serving data.json
+// create a GET route for serving data.json

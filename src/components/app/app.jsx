@@ -25,9 +25,7 @@ function App() {
   );
 }
 
-function AppContainer({
-  fetchJob, priorityFilter, statusFilter, dateFilter,
-}) {
+function AppContainer({ fetchJob, priorityFilter, statusFilter, dateFilter }) {
   useEffect(() => {
     fetchJob();
   }, [fetchJob, priorityFilter, statusFilter, dateFilter]);
@@ -35,11 +33,15 @@ function AppContainer({
   return <App />;
 }
 
-const mapDispatchToProps = (dispatch, { jobService }) => bindActionCreators(
-  {
-    fetchJob: fetchJobs(jobService),
-  },
-  dispatch,
-);
+const mapDispatchToProps = (dispatch, { jobService }) =>
+  bindActionCreators(
+    {
+      fetchJob: fetchJobs(jobService),
+    },
+    dispatch,
+  );
 
-export default compose(withJobService(), connect(null, mapDispatchToProps))(AppContainer);
+export default compose(
+  withJobService(),
+  connect(null, mapDispatchToProps),
+)(AppContainer);

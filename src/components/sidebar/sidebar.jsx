@@ -5,7 +5,11 @@ import Filter from '../filter';
 import DataPicker from '../data-picker';
 import Row from '../row';
 
-import { setPriorityFilter, setStatusFilter, setDateFilter } from '../../redux/actions/jobs';
+import {
+  setPriorityFilter,
+  setStatusFilter,
+  setDateFilter,
+} from '../../redux/actions/jobs';
 
 import {
   PRIORITY_LABEL,
@@ -16,7 +20,11 @@ import {
 
 import './sidebar.css';
 
-function Sidebar({ handlePriorityChange, handleStatusChange, handleDateChange }) {
+function Sidebar({
+  handlePriorityChange,
+  handleStatusChange,
+  handleDateChange,
+}) {
   return (
     <div className="sidebar__container">
       <h1 className="sidebar__title">Job Filters</h1>

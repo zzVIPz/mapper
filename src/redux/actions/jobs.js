@@ -12,9 +12,15 @@ export const setPriorityFilter = (priority) => ({
   payload: priority,
 });
 
-export const setStatusFilter = (status) => ({ type: 'SET_STATUS_FILTER', payload: status });
+export const setStatusFilter = (status) => ({
+  type: 'SET_STATUS_FILTER',
+  payload: status,
+});
 
-export const setDateFilter = (date) => ({ type: 'SET_DATE_FILTER', payload: date });
+export const setDateFilter = (date) => ({
+  type: 'SET_DATE_FILTER',
+  payload: date,
+});
 
 export const fetchJobs = (jobService) => () => (dispatch) => {
   dispatch(jobsRequested());
