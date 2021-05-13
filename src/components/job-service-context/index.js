@@ -1,3 +1,3 @@
-import { JobServiceProvider, JobServiceConsumer } from './job-service-context';
+import JobServiceContext from './job-service-context';
 
-export { JobServiceProvider, JobServiceConsumer };
+export default JobServiceContext;

@@ -15,7 +15,7 @@ function JobMap({ markers, center, zoom }) {
   return (
     <div className="map">
       <GoogleMapReact
-        bootstrapURLKeys={{ key: 'AIzaSyB9YBNN9dd0EBVOODgJ-k495AgA5sc4Sos' }}
+        bootstrapURLKeys={{ key: 'key' }}
         defaultCenter={center}
         defaultZoom={zoom}
         options={{ disableDoubleClickZoom: true, fullscreenControl: false }}

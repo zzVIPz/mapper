@@ -1,7 +1,7 @@
 // NATIONAL GRID INTERVIEW ASSIGNMENT
 // CANDIDATE NAME: SERGEY TELEGO
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -16,9 +16,22 @@ import { compose } from '../../utils';
 
 import './app.css';
 
+const Natification = () => {
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setVisible(false), 3000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  return visible && <p>Hello</p>;
+};
+
 function App() {
   return (
     <div className="app__container">
+      <Natification />
       <Map />
       <Sidebar />
     </div>
